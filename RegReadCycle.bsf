@@ -87,6 +87,13 @@ applicable agreement for further details.
 		(line (pt 0 160)(pt 16 160))
 	)
 	(port
+		(pt 0 176)
+		(input)
+		(text "repeat" (rect 0 0 37 13)(font "Arial" (font_size 8)))
+		(text "repeat" (rect 21 171 58 184)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176))
+	)
+	(port
 		(pt 208 32)
 		(output)
 		(text "R0[7..0]" (rect 0 0 46 13)(font "Arial" (font_size 8)))
