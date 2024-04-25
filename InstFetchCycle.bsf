@@ -1,0 +1,113 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 184 208)
+	(text "InstFetchCycle" (rect 5 0 89 13)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 177 26 188)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "PC[7..0]" (rect 0 0 47 13)(font "Arial" (font_size 8)))
+		(text "PC[7..0]" (rect 21 27 68 40)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk" (rect 0 0 18 13)(font "Arial" (font_size 8)))
+		(text "clk" (rect 21 43 39 56)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "isStall" (rect 0 0 35 13)(font "Arial" (font_size 8)))
+		(text "isStall" (rect 21 59 56 72)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "opcode[3..0]" (rect 0 0 70 13)(font "Arial" (font_size 8)))
+		(text "opcode[3..0]" (rect 77 27 147 40)(font "Arial" (font_size 8)))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(port
+		(pt 168 48)
+		(output)
+		(text "rs[2..0]" (rect 0 0 40 13)(font "Arial" (font_size 8)))
+		(text "rs[2..0]" (rect 107 43 147 56)(font "Arial" (font_size 8)))
+		(line (pt 168 48)(pt 152 48)(line_width 3))
+	)
+	(port
+		(pt 168 64)
+		(output)
+		(text "rt[2..0]" (rect 0 0 37 13)(font "Arial" (font_size 8)))
+		(text "rt[2..0]" (rect 110 59 147 72)(font "Arial" (font_size 8)))
+		(line (pt 168 64)(pt 152 64)(line_width 3))
+	)
+	(port
+		(pt 168 80)
+		(output)
+		(text "rd[2..0]" (rect 0 0 41 13)(font "Arial" (font_size 8)))
+		(text "rd[2..0]" (rect 106 75 147 88)(font "Arial" (font_size 8)))
+		(line (pt 168 80)(pt 152 80)(line_width 3))
+	)
+	(port
+		(pt 168 96)
+		(output)
+		(text "funct[2..0]" (rect 0 0 56 13)(font "Arial" (font_size 8)))
+		(text "funct[2..0]" (rect 91 91 147 104)(font "Arial" (font_size 8)))
+		(line (pt 168 96)(pt 152 96)(line_width 3))
+	)
+	(port
+		(pt 168 112)
+		(output)
+		(text "imm[5..0]" (rect 0 0 53 13)(font "Arial" (font_size 8)))
+		(text "imm[5..0]" (rect 94 107 147 120)(font "Arial" (font_size 8)))
+		(line (pt 168 112)(pt 152 112)(line_width 3))
+	)
+	(port
+		(pt 168 128)
+		(output)
+		(text "add[7..0]" (rect 0 0 50 13)(font "Arial" (font_size 8)))
+		(text "add[7..0]" (rect 97 123 147 136)(font "Arial" (font_size 8)))
+		(line (pt 168 128)(pt 152 128)(line_width 3))
+	)
+	(port
+		(pt 168 144)
+		(output)
+		(text "inst[15..0]" (rect 0 0 56 13)(font "Arial" (font_size 8)))
+		(text "inst[15..0]" (rect 91 139 147 152)(font "Arial" (font_size 8)))
+		(line (pt 168 144)(pt 152 144)(line_width 3))
+	)
+	(port
+		(pt 168 160)
+		(output)
+		(text "nPC[7..0]" (rect 0 0 54 13)(font "Arial" (font_size 8)))
+		(text "nPC[7..0]" (rect 93 155 147 168)(font "Arial" (font_size 8)))
+		(line (pt 168 160)(pt 152 160)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 176))
+	)
+)
