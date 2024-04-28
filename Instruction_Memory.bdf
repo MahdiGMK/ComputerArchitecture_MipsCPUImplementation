@@ -195,7 +195,7 @@ applicable agreement for further details.
 	)
 	(parameter
 		"LPM_FILE"
-		"\"test.mif\""
+		"\"rand.mif\""
 		"File containing initial contents of memory array"
 	)
 	(parameter
