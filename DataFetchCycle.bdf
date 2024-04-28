@@ -588,6 +588,31 @@ applicable agreement for further details.
 		(circle (rect 31 12 39 20))
 	)
 )
+(symbol
+	(rect 752 480 800 512)
+	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
+	(text "inst200" (rect 3 21 38 33)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
+)
 (connector
 	(pt 568 304)
 	(pt 568 256)
@@ -651,11 +676,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 264 304)
-	(pt 336 304)
-	(bus)
-)
-(connector
 	(text "clk" (rect 360 304 374 316)(font "Arial" ))
 	(pt 392 320)
 	(pt 352 320)
@@ -681,11 +701,6 @@ applicable agreement for further details.
 	(pt 840 456)
 )
 (connector
-	(text "clk" (rect 768 456 782 468)(font "Arial" ))
-	(pt 840 472)
-	(pt 760 472)
-)
-(connector
 	(pt 744 440)
 	(pt 840 440)
 	(bus)
@@ -699,4 +714,28 @@ applicable agreement for further details.
 	(pt 752 712)
 	(pt 824 712)
 )
+(connector
+	(text "clk" (rect 680 480 694 492)(font "Arial" ))
+	(pt 752 496)
+	(pt 672 496)
+)
+(connector
+	(pt 840 496)
+	(pt 800 496)
+)
+(connector
+	(pt 840 472)
+	(pt 840 496)
+)
+(connector
+	(pt 264 304)
+	(pt 336 304)
+	(bus)
+)
+(connector
+	(pt 336 304)
+	(pt 392 304)
+	(bus)
+)
 (junction (pt 568 304))
+(junction (pt 336 304))
