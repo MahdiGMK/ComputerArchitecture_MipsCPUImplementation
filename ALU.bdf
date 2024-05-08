@@ -84,6 +84,22 @@ applicable agreement for further details.
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
 (pin
+	(input)
+	(rect -32 768 136 784)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "discard" (rect 5 0 41 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
 	(rect 912 168 1088 184)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -625,6 +641,96 @@ applicable agreement for further details.
 		(circle (rect 31 12 39 20))
 	)
 )
+(symbol
+	(rect -112 80 -80 112)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst7" (rect 3 21 26 33)(font "Arial" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 16 48 64 80)
+	(text "WIRE" (rect 1 0 24 10)(font "Arial" (font_size 6)))
+	(text "inst14" (rect 3 21 32 33)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(line (pt 32 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 14 7)(pt 32 16))
+		(line (pt 14 25)(pt 14 7))
+		(line (pt 14 25)(pt 32 16))
+	)
+)
+(symbol
+	(rect 104 40 216 128)
+	(text "BUSMUX" (rect 28 72 91 88)(font "Arial" (font_size 10)))
+	(text "inst78" (rect 3 -3 37 11)(font "Arial" (font_size 8)))
+	(port
+		(pt 0 24)
+		(input)
+		(text "datab[WIDTH-1..0]" (rect 6 51 108 65)(font "Arial" (font_size 8)))
+		(text "datab[]" (rect 6 23 44 37)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 44 24)(line_width 3))
+	)
+	(port
+		(pt 56 0)
+		(input)
+		(text "sel" (rect 59 70 75 84)(font "Arial" (font_size 8)))
+		(text "sel" (rect 59 4 75 18)(font "Arial" (font_size 8)))
+		(line (pt 56 0)(pt 56 16))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "dataa[WIDTH-1..0]" (rect 6 19 108 33)(font "Arial" (font_size 8)))
+		(text "dataa[]" (rect 6 55 44 69)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 44 56)(line_width 3))
+	)
+	(port
+		(pt 112 40)
+		(output)
+		(text "result[WIDTH-1..0]" (rect 75 35 177 49)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 39 113 53)(font "Arial" (font_size 8)))
+		(line (pt 68 40)(pt 112 40)(line_width 3))
+	)
+	(parameter
+		"WIDTH"
+		"4"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(drawing
+		(text "0" (rect 52 47 56 57)(font "Arial" (font_size 6)))
+		(text "1" (rect 52 23 56 33)(font "Arial" (font_size 6)))
+		(line (pt 68 24)(pt 68 56))
+		(line (pt 44 8)(pt 44 72))
+		(line (pt 44 72)(pt 68 56))
+		(line (pt 44 8)(pt 68 24))
+	)
+	(flipx)
+	(annotation_block (parameter)(rect 216 8 344 36))
+)
 (connector
 	(pt 608 176)
 	(pt 616 176)
@@ -730,12 +836,6 @@ applicable agreement for further details.
 (connector
 	(pt 616 432)
 	(pt 616 688)
-	(bus)
-)
-(connector
-	(text "op[3..0]" (rect 208 280 245 292)(font "Arial" ))
-	(pt 296 296)
-	(pt 200 296)
 	(bus)
 )
 (connector
@@ -915,6 +1015,42 @@ applicable agreement for further details.
 	(text "ready0" (rect 624 88 658 100)(font "Arial" ))
 	(pt 688 104)
 	(pt 616 104)
+)
+(connector
+	(pt -96 80)
+	(pt -96 64)
+)
+(connector
+	(pt -96 64)
+	(pt 16 64)
+)
+(connector
+	(pt 64 64)
+	(pt 104 64)
+	(bus)
+)
+(connector
+	(text "discard" (rect 143 -7 155 28)(font "Arial" )(vertical))
+	(pt 160 40)
+	(pt 160 -32)
+)
+(connector
+	(text "op[3..0]" (rect 8 80 45 92)(font "Arial" ))
+	(pt 0 96)
+	(pt 104 96)
+	(bus)
+)
+(connector
+	(text "op1[3..0]" (rect 224 64 267 76)(font "Arial" ))
+	(pt 216 80)
+	(pt 264 80)
+	(bus)
+)
+(connector
+	(text "op1[3..0]" (rect 200 280 243 292)(font "Arial" ))
+	(pt 296 296)
+	(pt 192 296)
+	(bus)
 )
 (junction (pt 792 176))
 (junction (pt 592 384))

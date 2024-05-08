@@ -301,33 +301,34 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 712 464 760 496)
-	(text "WIRE" (rect 1 0 24 10)(font "Arial" (font_size 6)))
-	(text "inst5" (rect 3 21 26 33)(font "Arial" ))
+	(rect 832 512 880 544)
+	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
+	(text "inst1" (rect 3 21 26 33)(font "Arial" ))
 	(port
 		(pt 0 16)
 		(input)
 		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
 		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 14 16))
+		(line (pt 0 16)(pt 13 16))
 	)
 	(port
 		(pt 48 16)
 		(output)
 		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
 		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(line (pt 32 16)(pt 48 16))
+		(line (pt 39 16)(pt 48 16))
 	)
 	(drawing
-		(line (pt 14 7)(pt 32 16))
-		(line (pt 14 25)(pt 14 7))
-		(line (pt 14 25)(pt 32 16))
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
 	)
 )
 (symbol
-	(rect 696 280 760 328)
+	(rect 664 376 728 424)
 	(text "OR2" (rect 1 0 19 10)(font "Arial" (font_size 6)))
-	(text "inst6" (rect 3 37 26 49)(font "Arial" ))
+	(text "inst2" (rect 3 37 26 49)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -355,31 +356,6 @@ applicable agreement for further details.
 		(arc (pt 7 29)(pt 7 19)(rect -14 8 19 41))
 		(arc (pt 49 24)(pt 25 13)(rect -6 13 57 76))
 		(arc (pt 25 35)(pt 49 24)(rect -6 -27 57 36))
-	)
-)
-(symbol
-	(rect 832 512 880 544)
-	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
-	(text "inst1" (rect 3 21 26 33)(font "Arial" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 13 16))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(line (pt 39 16)(pt 48 16))
-	)
-	(drawing
-		(line (pt 13 25)(pt 13 7))
-		(line (pt 13 7)(pt 31 16))
-		(line (pt 13 25)(pt 31 16))
-		(circle (rect 31 12 39 20))
 	)
 )
 (connector
@@ -412,16 +388,6 @@ applicable agreement for further details.
 	(pt 648 520)
 )
 (connector
-	(text "opcode[3]" (rect 656 464 704 476)(font "Arial" ))
-	(pt 712 480)
-	(pt 648 480)
-)
-(connector
-	(text "BRANCH" (rect 768 464 815 476)(font "Arial" ))
-	(pt 760 480)
-	(pt 832 480)
-)
-(connector
 	(text "MREAD" (rect 792 408 830 420)(font "Arial" ))
 	(pt 600 424)
 	(pt 832 424)
@@ -432,19 +398,6 @@ applicable agreement for further details.
 	(pt 832 440)
 )
 (connector
-	(pt 600 296)
-	(pt 696 296)
-)
-(connector
-	(pt 600 312)
-	(pt 696 312)
-)
-(connector
-	(text "JUMP" (rect 768 288 797 300)(font "Arial" ))
-	(pt 760 304)
-	(pt 824 304)
-)
-(connector
 	(text "RDST" (rect 888 512 917 524)(font "Arial" ))
 	(pt 880 528)
 	(pt 936 528)
@@ -452,4 +405,22 @@ applicable agreement for further details.
 (connector
 	(pt 832 528)
 	(pt 776 528)
+)
+(connector
+	(text "JUMP" (rect 704 296 733 308)(font "Arial" ))
+	(pt 600 312)
+	(pt 760 312)
+)
+(connector
+	(text "BRANCH" (rect 736 384 783 396)(font "Arial" ))
+	(pt 728 400)
+	(pt 800 400)
+)
+(connector
+	(pt 600 392)
+	(pt 664 392)
+)
+(connector
+	(pt 600 408)
+	(pt 664 408)
 )

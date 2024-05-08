@@ -2,12 +2,8 @@ library verilog;
 use verilog.vl_types.all;
 entity PipelineCPU_vlg_check_tst is
     port(
-        ALU_PC          : in     vl_logic_vector(7 downto 0);
-        ALUCONFLICTING  : in     vl_logic;
+        last_inst       : in     vl_logic_vector(15 downto 0);
         Last_PC         : in     vl_logic_vector(7 downto 0);
-        opcode_ALU      : in     vl_logic_vector(3 downto 0);
-        opcode_RegRead  : in     vl_logic_vector(3 downto 0);
-        PC              : in     vl_logic_vector(7 downto 0);
         R0              : in     vl_logic_vector(7 downto 0);
         R1              : in     vl_logic_vector(7 downto 0);
         R2              : in     vl_logic_vector(7 downto 0);

@@ -117,9 +117,25 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -40 744 128 760)
+	(rect -8 736 160 752)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "clk" (rect 5 0 19 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -8 768 160 784)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "Data[7..0]" (rect 5 0 55 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -624,11 +640,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 392 256)
-	(pt 336 256)
-	(bus)
-)
-(connector
 	(pt 568 304)
 	(pt 680 304)
 	(bus)
@@ -669,11 +680,6 @@ applicable agreement for further details.
 	(text "MemWrite" (rect 336 320 385 332)(font "Arial" ))
 	(pt 392 336)
 	(pt 328 336)
-)
-(connector
-	(pt 336 256)
-	(pt 336 304)
-	(bus)
 )
 (connector
 	(text "clk" (rect 360 304 374 316)(font "Arial" ))
@@ -729,13 +735,13 @@ applicable agreement for further details.
 )
 (connector
 	(pt 264 304)
-	(pt 336 304)
-	(bus)
-)
-(connector
-	(pt 336 304)
 	(pt 392 304)
 	(bus)
 )
+(connector
+	(text "Data[7..0]" (rect 291 240 340 252)(font "Arial" ))
+	(pt 272 256)
+	(pt 392 256)
+	(bus)
+)
 (junction (pt 568 304))
-(junction (pt 336 304))

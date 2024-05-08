@@ -195,7 +195,7 @@ applicable agreement for further details.
 	)
 	(parameter
 		"LPM_FILE"
-		"\"rand.mif\""
+		"\"Gnome_Sort.mif\""
 		"File containing initial contents of memory array"
 	)
 	(parameter
@@ -233,7 +233,7 @@ applicable agreement for further details.
 		(line (pt 112 112)(pt 112 16))
 		(line (pt 16 112)(pt 16 16))
 	)
-	(annotation_block (parameter)(rect 560 192 824 304))
+	(annotation_block (parameter)(rect 544 184 820 296))
 )
 (connector
 	(pt 360 416)
@@ -258,6 +258,14 @@ applicable agreement for further details.
 (connector
 	(pt 344 384)
 	(pt 408 384)
+)
+(connector
+	(pt 328 328)
+	(pt 312 328)
+)
+(connector
+	(pt 392 360)
+	(pt 424 360)
 )
 (connector
 	(pt 432 264)
@@ -288,14 +296,6 @@ applicable agreement for further details.
 (connector
 	(pt 424 344)
 	(pt 432 344)
-)
-(connector
-	(pt 328 328)
-	(pt 312 328)
-)
-(connector
-	(pt 392 360)
-	(pt 424 360)
 )
 (connector
 	(pt 424 360)

@@ -195,7 +195,7 @@ applicable agreement for further details.
 	)
 	(parameter
 		"LPM_FILE"
-		""
+		"\"array.mif\""
 		"File containing initial contents of memory array"
 	)
 	(parameter
@@ -236,19 +236,6 @@ applicable agreement for further details.
 	(annotation_block (parameter)(rect 728 176 992 288))
 )
 (connector
-	(pt 600 312)
-	(pt 600 248)
-	(bus)
-)
-(connector
-	(pt 576 360)
-	(pt 600 360)
-)
-(connector
-	(pt 576 360)
-	(pt 576 368)
-)
-(connector
 	(pt 528 400)
 	(pt 512 400)
 )
@@ -257,25 +244,12 @@ applicable agreement for further details.
 	(pt 512 368)
 )
 (connector
-	(pt 576 400)
-	(pt 576 376)
-)
-(connector
-	(pt 576 376)
-	(pt 600 376)
-)
-(connector
 	(pt 488 368)
 	(pt 512 368)
 )
 (connector
 	(pt 512 368)
 	(pt 576 368)
-)
-(connector
-	(pt 728 344)
-	(pt 712 344)
-	(bus)
 )
 (connector
 	(pt 536 344)
@@ -296,6 +270,32 @@ applicable agreement for further details.
 (connector
 	(pt 576 304)
 	(pt 576 328)
+)
+(connector
+	(pt 600 248)
+	(pt 600 312)
+	(bus)
+)
+(connector
+	(pt 576 360)
+	(pt 600 360)
+)
+(connector
+	(pt 576 368)
+	(pt 576 360)
+)
+(connector
+	(pt 576 400)
+	(pt 576 376)
+)
+(connector
+	(pt 576 376)
+	(pt 600 376)
+)
+(connector
+	(pt 712 344)
+	(pt 728 344)
+	(bus)
 )
 (connector
 	(pt 584 344)

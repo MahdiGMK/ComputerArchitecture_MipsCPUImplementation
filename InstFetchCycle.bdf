@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 64 168 232 184)
+	(rect -32 168 136 184)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "PC[7..0]" (rect 5 0 46 12)(font "Arial" ))
 	(pt 168 8)
@@ -37,7 +37,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 64 184 232 200)
+	(rect -32 184 136 200)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "clk" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
@@ -56,6 +56,22 @@ applicable agreement for further details.
 	(rect 144 328 312 344)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "isStall" (rect 5 0 34 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 152 472 320 488)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "discard" (rect 5 0 41 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -358,7 +374,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 216 216 248 248)
+	(rect 120 216 152 248)
 	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
 	(text "inst100" (rect 3 21 38 33)(font "Arial" )(invisible))
 	(port
@@ -375,7 +391,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 248 144 432 240)
+	(rect 152 144 336 240)
 	(text "Instruction_Memory" (rect 5 0 115 14)(font "Arial" (font_size 8)))
 	(text "inst150" (rect 8 80 43 92)(font "Arial" ))
 	(port
@@ -410,27 +426,95 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 168 80))
 	)
 )
-(connector
-	(pt 248 176)
-	(pt 232 176)
-	(bus)
+(symbol
+	(rect 248 56 296 88)
+	(text "WIRE" (rect 1 0 24 10)(font "Arial" (font_size 6)))
+	(text "inst4" (rect 3 21 26 33)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(line (pt 32 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 14 7)(pt 32 16))
+		(line (pt 14 25)(pt 14 7))
+		(line (pt 14 25)(pt 32 16))
+	)
 )
-(connector
-	(pt 232 216)
-	(pt 232 208)
+(symbol
+	(rect 368 48 480 136)
+	(text "BUSMUX" (rect 28 72 91 88)(font "Arial" (font_size 10)))
+	(text "inst6" (rect 3 -1 26 11)(font "Arial" ))
+	(port
+		(pt 0 24)
+		(input)
+		(text "datab[WIDTH-1..0]" (rect 6 51 108 65)(font "Arial" (font_size 8)))
+		(text "datab[]" (rect 6 23 44 37)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 44 24)(line_width 3))
+	)
+	(port
+		(pt 56 0)
+		(input)
+		(text "sel" (rect 59 70 75 84)(font "Arial" (font_size 8)))
+		(text "sel" (rect 59 4 75 18)(font "Arial" (font_size 8)))
+		(line (pt 56 0)(pt 56 16))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "dataa[WIDTH-1..0]" (rect 6 19 108 33)(font "Arial" (font_size 8)))
+		(text "dataa[]" (rect 6 55 44 69)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 44 56)(line_width 3))
+	)
+	(port
+		(pt 112 40)
+		(output)
+		(text "result[WIDTH-1..0]" (rect 75 35 177 49)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 39 113 53)(font "Arial" (font_size 8)))
+		(line (pt 68 40)(pt 112 40)(line_width 3))
+	)
+	(parameter
+		"WIDTH"
+		"16"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(drawing
+		(text "0" (rect 52 47 56 57)(font "Arial" (font_size 6)))
+		(text "1" (rect 52 23 56 33)(font "Arial" (font_size 6)))
+		(line (pt 68 24)(pt 68 56))
+		(line (pt 44 8)(pt 44 72))
+		(line (pt 44 72)(pt 68 56))
+		(line (pt 44 8)(pt 68 24))
+	)
+	(flipx)
+	(annotation_block (parameter)(rect 480 16 608 44))
 )
-(connector
-	(pt 232 208)
-	(pt 248 208)
-)
-(connector
-	(pt 232 192)
-	(pt 248 192)
-)
-(connector
-	(pt 432 176)
-	(pt 504 176)
-	(bus)
+(symbol
+	(rect 208 88 240 120)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "inst10" (rect 3 21 32 33)(font "Arial" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
 )
 (connector
 	(pt 504 208)
@@ -470,4 +554,64 @@ applicable agreement for further details.
 	(text "clk" (rect 512 392 526 404)(font "Arial" ))
 	(pt 560 408)
 	(pt 504 408)
+)
+(connector
+	(pt 152 176)
+	(pt 136 176)
+	(bus)
+)
+(connector
+	(pt 136 216)
+	(pt 136 208)
+)
+(connector
+	(pt 136 208)
+	(pt 152 208)
+)
+(connector
+	(pt 136 192)
+	(pt 152 192)
+)
+(connector
+	(pt 224 88)
+	(pt 224 72)
+)
+(connector
+	(pt 224 72)
+	(pt 248 72)
+)
+(connector
+	(pt 296 72)
+	(pt 368 72)
+	(bus)
+)
+(connector
+	(pt 336 176)
+	(pt 352 176)
+	(bus)
+)
+(connector
+	(pt 352 176)
+	(pt 352 104)
+	(bus)
+)
+(connector
+	(pt 352 104)
+	(pt 368 104)
+	(bus)
+)
+(connector
+	(pt 480 88)
+	(pt 504 88)
+	(bus)
+)
+(connector
+	(pt 504 88)
+	(pt 504 176)
+	(bus)
+)
+(connector
+	(text "discard" (rect 408 2 420 37)(font "Arial" )(vertical))
+	(pt 424 48)
+	(pt 424 -16)
 )

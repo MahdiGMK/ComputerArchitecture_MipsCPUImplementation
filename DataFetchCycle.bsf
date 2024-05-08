@@ -73,6 +73,13 @@ applicable agreement for further details.
 		(line (pt 0 128)(pt 16 128))
 	)
 	(port
+		(pt 0 144)
+		(input)
+		(text "Data[7..0]" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "Data[7..0]" (rect 21 139 75 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
 		(pt 184 32)
 		(output)
 		(text "out[7..0]" (rect 0 0 46 14)(font "Arial" (font_size 8)))
